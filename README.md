@@ -71,7 +71,7 @@ When ever you are doing exploratory data analysis or feature engineering you nee
          sns.scatterplot(tips[tips["total_bill"],tips["tip"])
 # Multi-varerate ananylsis- plot 2 or more  features/column
  # x-num- ,y-num
- # 1.scatter plot- when we use  x-> numerical variable  y-> numerical varibale
+ # 1.scatter plot- when we use  x-> numerical variable  y-> numerical varibale ( we check the datais linear or not using this plot)
    sns.scatterplot(tips[tips["total_bill"],tips["tip"],hue=tips["sex"],style=tips["smoker"],size=tips["size"])
 # x-cat,y-num  
   # 2. Bar plot   - x->numerical varibale y-> categorical variable 
