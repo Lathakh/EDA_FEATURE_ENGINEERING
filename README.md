@@ -12,7 +12,7 @@ When ever you are doing exploratory data analysis or feature engineering you nee
 9.Check the unique value?  df.nunique()
 10.Check correlation between columns? c=df.corr()  ,sns.heatmp(c,annot=True)
 
-# From each  code we make some conculsoin on data  it may be plots , segregate data
+#### From each  code we make some conculsoin on data  it may be plots , segregate data
 
 # univeriate  analysis
         This is  process of performing independent analysis by takng single column. 
