@@ -97,7 +97,7 @@ When ever you are doing exploratory data analysis or feature engineering you nee
  plt.figure(figsize=(15,15))
  sns.heatmap(flight.pivot_table(values="passengers",index="month",columns="year"),annot=True)
 
-# pandas profiling
+# pandas profiling - descriptive statistics
  single shot learning on EDA we can perform custom EDA for further information
  
  from pandas_profiling import ProfileReport
