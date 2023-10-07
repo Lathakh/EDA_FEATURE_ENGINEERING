@@ -69,13 +69,7 @@ When ever you are doing exploratory data analysis or feature engineering you nee
    # bivarerate ananylsis
   # 1.scatter plot- when we use  x-> numerical variable  y-> numerical varibale
          sns.scatterplot(tips[tips["total_bill"],tips["tip"])
-
 # Multi-varerate ananylsis- plot 2 or more  features/column
-
-
-
- 
-
  # x-num- ,y-num
  # 1.scatter plot- when we use  x-> numerical variable  y-> numerical varibale
    sns.scatterplot(tips[tips["total_bill"],tips["tip"],hue=tips["sex"],style=tips["smoker"],size=tips["size"])
@@ -98,3 +92,18 @@ When ever you are doing exploratory data analysis or feature engineering you nee
 # lineplot-  time series - alternate of scatter plot
   sns.lineplot(tips["total_bill"],tips["tip"])
   
+# pivot  plot  - categorical feature
+ flight.pivot_table(values="passengers",index="month",columns="year")
+ plt.figure(figsize=(15,15))
+ sns.heatmap(flight.pivot_table(values="passengers",index="month",columns="year"),annot=True)
+
+# pandas profiling
+ single shot learning on EDA we can perform custom EDA for further information
+ 
+ from pandas_profiling import ProfileReport
+ profile=ProfileReport(tatinc,title="pandas profiling report")
+ profile.to_file("your_report.html")
+
+# dendo gram explains cluster mapping
+sns.clustermap(flight.pivot_table(values="passengers",index="month",columns="year"),annot=True)
+ 
