@@ -72,22 +72,29 @@ When ever you are doing exploratory data analysis or feature engineering you nee
 
 # Multi-varerate ananylsis- plot 2 or more  features/column
 
- # x-cat y-cat
- # x-num- ,y-num
- # x-num,y-cat
- # x-cat,y-num
 
+
+ 
+
+ # x-num- ,y-num
  # 1.scatter plot- when we use  x-> numerical variable  y-> numerical varibale
-   sns.scatterplot(tips[tips["total_bill"],tips["tip"],hue=tips["sex"],style=tips["smoker"],size=tips["size"])    
-# 2. Bar plot   - x->numerical varibale y-> categorical variable 
+   sns.scatterplot(tips[tips["total_bill"],tips["tip"],hue=tips["sex"],style=tips["smoker"],size=tips["size"])
+# x-cat,y-num  
+  # 2. Bar plot   - x->numerical varibale y-> categorical variable 
      sns.barplot(titanic[pclas],titanic["age"],hue=titanic["sex"])
 
-# 3.boxplot -   x->numerical varibale y-> categorical variable 
+# x-num,y-cat
+  # 3.boxplot -   x->numerical varibale y-> categorical variable 
      sns.boxplot(titanic["age"],titanic["sex"],hue=titanic["survived"])
-# 4. distplot 
+  # 4. distplot 
   sns.distplot(titanic[titanic["survived"]==1]["Age"], hist=False)
-
-# 1, heat map - x-> categorical  y-> categorical
-
-
-     
+  
+ # x-cat y-cat
+  # 1, heat map - x-> categorical  y-> categorical
+     sns.heatmap(pd.crosstab(tatinc["Pclass"],tatinc["Survived"]),annot=True)
+ 
+# pair plot
+  sns.pairplot(iris,hue="species")
+# lineplot-  time series - alternate of scatter plot
+  sns.lineplot(tips["total_bill"],tips["tip"])
+  
