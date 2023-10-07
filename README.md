@@ -2,14 +2,23 @@
 When ever you are doing exploratory data analysis or feature engineering you need ask yourself with some of the question regarding data.
 
 1.Shape of data or size of the data rows an columns? df.shape, df.size=total number entires
+
 2.How much memory usage  occupied by data?  df.memory_usage(deep=True) RAM
+
 3.How the data look likes?  df.head() -top 5,df.tail() # we can take df.sample(5)
+
 4.What is datatype of columns?   df.dtypes, df.info()
+
 5.How data look like in mathematically?  df.describe().T only integer columns not for object type
+
 6.Do we have null value or missing value?   df.isnull()
+
 7.How total number of null-value for entire data?  df.isnull().sum().sum() 
+
 8.Check the duplicate values or rows?  df.duplicated().sum()
+
 9.Check the unique value?  df.nunique()
+
 10.Check correlation between columns? c=df.corr()  ,sns.heatmp(c,annot=True)
 
 #### From each  code we make some conculsoin on data  it may be plots , segregate data
