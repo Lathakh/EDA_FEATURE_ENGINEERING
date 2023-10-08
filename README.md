@@ -106,4 +106,21 @@ When ever you are doing exploratory data analysis or feature engineering you nee
 
 # dendo gram explains cluster mapping
 sns.clustermap(flight.pivot_table(values="passengers",index="month",columns="year"),annot=True)
- 
+
+
+
+# Feature Engineering
+1. Feature tranformation
+2. feature construction
+3. feature selection/ exctraction- subset of data
+4. feature extractin - we merge all the feature and represent it into single feature
+
+
+# 1. Feature tranformation
+    1. missing value
+    2. outlier
+    3.scaling
+    4.encoding-one-hot,dummy,ordinal,binary,count ,target
+    5.mathematical transform  wrt columns , box
+   # 3.scaling - we are scaling down to range 0-1    
+      
